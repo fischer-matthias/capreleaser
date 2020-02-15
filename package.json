@@ -1,0 +1,17 @@
+{
+  "name": "capreleaser",
+  "version": "1.0.0",
+  "description": "simple capacitor release tool",
+  "bin": {
+    "releaser": "./bin/index.js"
+  },
+  "keywords": [
+    "capacitor",
+    "release"
+  ],
+  "author": "Matthias Fischer",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^4.1.1"
+  }
+}
