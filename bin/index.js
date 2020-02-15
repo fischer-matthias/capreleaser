@@ -67,7 +67,6 @@ function updateAndroidBuildGradle(version) {
         }
 
         updatedFile += line + '\n';
-        index++;
     }
 
     fs.writeFileSync('android/app/build.gradle', updatedFile);
