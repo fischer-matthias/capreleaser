@@ -29,6 +29,6 @@ capreleaser -h
 
 ## todo
 - [X] update `package.json`
-- [ ] update `android/app/build.gradle`
+- [X] update `android/app/build.gradle`
 - [ ] update ios-version
 - [ ] update electron-version
