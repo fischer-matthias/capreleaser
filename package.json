@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "simple capacitor release tool",
   "bin": {
-    "releaser": "./bin/index.js"
+    "capreleaser": "./bin/index.js"
   },
   "keywords": [
     "capacitor",
