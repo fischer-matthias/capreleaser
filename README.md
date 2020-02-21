@@ -23,11 +23,11 @@ cd /path/to/project
 capreleaser <RELEASETYPE>
 ```
 
-| flag | description |
-|---|---|
-| `-M` | major release `X.0.0` |
-| `-m` | minor release `0.X.0` |
-| `-p` | patch release `0.0.X` |
+| flag              | description           |
+| ----------------- | --------------------- |
+| `-M` or `--major` | major release `X.0.0` |
+| `-m` or `--minor` | minor release `0.X.0` |
+| `-p` or `--patch` | patch release `0.0.X` |
 
 ## Todo
 - [ ] update ios-version

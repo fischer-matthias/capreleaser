@@ -3,12 +3,12 @@ var program = require('commander');
 var fs = require('fs');
 
 program
-    .option('-f, --fix', 'Fix release (0.0.X)')
+    .option('-p, --patch', 'Patch release (0.0.X)')
     .option('-m, --minor', 'Minor release (0.X.0)')
     .option('-M, --major', 'Major release (X.0.0)')
     .action(function () {
-        if (program.fix) {
-            updateVersion('fix');
+        if (program.patch) {
+            updateVersion('patch');
         } else if (program.minor) {
             updateVersion('minor');
         } else if (program.major) {
@@ -34,8 +34,8 @@ function updatePackageJson(type) {
     const packageJSON = readPackageJson();
 
     switch (type) {
-        case 'fix':
-            packageJSON.version = addFix(packageJSON.version);
+        case 'patch':
+            packageJSON.version = addPatch(packageJSON.version);
             break;
         case 'minor':
             packageJSON.version = addMinor(packageJSON.version);
@@ -77,7 +77,7 @@ function checkAndroidAvailable() {
     return fs.existsSync('android/app/build.gradle');
 }
 
-function addFix(version) {
+function addPatch(version) {
     let arr = version.split('.');
     arr[2] = (arr[2] * 1) + 1;
     return `${arr[0]}.${arr[1]}.${arr[2]}`;
